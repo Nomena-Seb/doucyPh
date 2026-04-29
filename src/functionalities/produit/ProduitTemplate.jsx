@@ -4,6 +4,8 @@ export default function ProduitTemplate({
   logoSrc,
   productImageSrc,
   backgroundImageSrc,
+  cornerImageSrc,
+  cornerImageAlt = "",
   logoAlt = "Logo produit",
   productImageAlt = "Catalogue produit",
   slogan,
@@ -23,6 +25,7 @@ export default function ProduitTemplate({
     sloganClassName = "",
     descriptionClassName = "",
     brandClassName = "",
+    cornerImageClassName = "",
   } = textStyles;
 
   return (
@@ -75,6 +78,15 @@ export default function ProduitTemplate({
             duration="duration-[1400ms]"
             className="relative flex items-start justify-center overflow-visible pt-20 pb-10 px-3 sm:pt-10 sm:pb-10 sm:px-5 md:min-h-0 md:items-center md:overflow-hidden md:p-0"
           >
+            {cornerImageSrc ? (
+              <img
+                src={cornerImageSrc}
+                alt={cornerImageAlt}
+                className={cornerImageClassName}
+                aria-hidden={cornerImageAlt ? undefined : true}
+              />
+            ) : null}
+
             <img
               src={productImageSrc}
               alt={productImageAlt}

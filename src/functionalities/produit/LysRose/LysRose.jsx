@@ -2,6 +2,7 @@ import logoLys from "../../../assets/logoLys.png";
 import catalogueProduit from "../../../assets/Catalogue-produit1.jpg";
 import ProduitTemplate from "../ProduitTemplate";
 import FondImage from "../../../assets/lysFond.jpg";
+import heroImage from "../../../assets/textLysRose.jpg";
 
 export default function Produit4() {
   const paragraphs = [
@@ -16,6 +17,8 @@ export default function Produit4() {
       "mt-3 space-y-2 text-[clamp(0.68rem,1.1vw,1.18rem)] font-medium leading-relaxed tracking-wide text-slate-700 sm:mt-4 sm:space-y-3 md:mt-6 md:space-y-4",
     brandClassName:
       "mr-1 text-[clamp(1rem,2vw,2.2rem)] font-extrabold leading-none text-slate-900",
+    cornerImageClassName:
+      "pointer-events-none absolute left-2 top-15 z-10 w-20 rounded-2xl opacity-95 shadow-lg sm:left-8 sm:top-5 sm:w-28 md:left-14 md:top-12 md:w-44 md:rounded-3xl",
   };
 
   return (
@@ -29,6 +32,8 @@ export default function Produit4() {
       brandName="Lys,"
       paragraphs={paragraphs}
       textStyles={textStyles}
+      cornerImageSrc={heroImage}
+      cornerImageAlt="Décoration produit Lys Rose"
     />
   );
 }
