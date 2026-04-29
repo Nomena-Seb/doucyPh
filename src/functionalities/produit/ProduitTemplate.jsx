@@ -20,12 +20,12 @@ export default function ProduitTemplate({
   return (
     <section className="w-full bg-white p-0 md:min-h-screen">
       <div
-        className="w-full overflow-hidden bg-cover bg-center bg-no-repeat md:min-h-[calc(100vh-7rem)]"
+        className="w-full overflow-visible bg-cover bg-center bg-no-repeat md:min-h-[calc(100vh-7rem)] md:overflow-hidden"
         style={infoPanelStyle}
       >
-        <div className="grid h-full w-full grid-cols-[1.2fr_0.8fr] md:min-h-0 md:grid-cols-2">
+        <div className="grid w-full grid-cols-[1.2fr_0.8fr] md:h-full md:min-h-0 md:grid-cols-2">
           <div
-            className="flex flex-col justify-start px-3 pt-10 pb-8 text-slate-900 sm:px-4 sm:pt-10 sm:pb-8 md:min-h-0 md:justify-start md:px-12 md:pt-16 md:pb-10 lg:px-16"
+            className="flex flex-col justify-start px-3 pt-10 pb-20 text-slate-900 sm:px-4 sm:pt-10 sm:pb-10 md:min-h-0 md:justify-start md:px-12 md:pt-16 md:pb-10 lg:px-16"
           >
             <ScrollReveal
               variant="zoomIn"
@@ -65,7 +65,7 @@ export default function ProduitTemplate({
             variant="fadeRight"
             delay="delay-200"
             duration="duration-[1400ms]"
-            className="relative flex items-start justify-center overflow-hidden pt-10 pb-8 px-3 sm:pt-10 sm:pb-8 sm:px-5 md:min-h-0 md:p-0 md:items-center"
+            className="relative flex items-start justify-center overflow-visible pt-20 pb-10 px-3 sm:pt-10 sm:pb-10 sm:px-5 md:min-h-0 md:items-center md:overflow-hidden md:p-0"
           >
             <img
               src={productImageSrc}
