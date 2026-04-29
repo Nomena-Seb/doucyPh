@@ -9,6 +9,7 @@ export default function ProduitTemplate({
   slogan,
   brandName,
   paragraphs,
+  textStyles = {},
 }) {
   // Le style est maintenant préparé pour le conteneur global
   const infoPanelStyle = backgroundImageSrc
@@ -16,6 +17,13 @@ export default function ProduitTemplate({
         backgroundImage: `url(${backgroundImageSrc})`,
       }
     : undefined;
+
+  const {
+    panelTextClassName = "",
+    sloganClassName = "",
+    descriptionClassName = "",
+    brandClassName = "",
+  } = textStyles;
 
   return (
     <section className="w-full bg-white p-0 md:min-h-screen">
@@ -25,7 +33,7 @@ export default function ProduitTemplate({
       >
         <div className="grid w-full grid-cols-[1.2fr_0.8fr] md:h-full md:min-h-0 md:grid-cols-2">
           <div
-            className="flex flex-col justify-start px-3 pt-10 pb-20 text-slate-900 sm:px-4 sm:pt-10 sm:pb-10 md:min-h-0 md:justify-start md:px-12 md:pt-16 md:pb-10 lg:px-16"
+            className={`flex flex-col justify-start px-3 pt-10 pb-20 sm:px-4 sm:pt-10 sm:pb-10 md:min-h-0 md:justify-start md:px-12 md:pt-16 md:pb-10 lg:px-16 ${panelTextClassName}`}
           >
             <ScrollReveal
               variant="zoomIn"
@@ -44,13 +52,13 @@ export default function ProduitTemplate({
               delay="delay-300"
               className="mt-4 w-full sm:mt-6 md:mt-8"
             >
-              <h1 className="font-['Brush_Script_MT','Segoe_Script',cursive] text-[clamp(1.05rem,4.3vw,4.2rem)] italic leading-none tracking-wide text-slate-900">
+              <h1 className={sloganClassName}>
                 {slogan}
               </h1>
 
-              <div className="mt-3 space-y-2 text-[clamp(0.68rem,1.1vw,1.18rem)] font-medium leading-relaxed tracking-wide text-slate-700 sm:mt-4 sm:space-y-3 md:mt-6 md:space-y-4">
+              <div className={descriptionClassName}>
                 <p>
-                  <span className="mr-1 text-[clamp(1rem,2vw,2.2rem)] font-extrabold leading-none text-slate-900">
+                  <span className={brandClassName}>
                     {brandName}
                   </span>
                   {paragraphs[0]}
