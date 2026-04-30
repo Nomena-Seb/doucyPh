@@ -28,7 +28,7 @@
 
   .produit-cta-anim {
     will-change: transform;
-    animation: produitCtaFloatMobile 0.7s ease-in-out infinite;
+    animation: produitCtaFloatMobile 1.1s ease-in-out infinite;
   }
 
   .produit-cta-anim:hover,
@@ -67,54 +67,62 @@
 
 @keyframes produitCtaFloatMobile {
   0%,
+  22%,
+  78%,
   100% {
     transform: rotate(0deg) scale(1);
   }
-  25% {
+  34% {
     transform: rotate(-2deg) scale(1.04);
   }
   50% {
     transform: rotate(0deg) scale(1.02);
   }
-  75% {
+  66% {
     transform: rotate(2deg) scale(1.05);
   }
 }
 
 @keyframes produitCtaFloatSm {
   0%,
+  22%,
+  78%,
   100% {
     transform: rotate(0deg) scale(1);
   }
-  25% {
+  34% {
     transform: rotate(-2.5deg) scale(1.05);
   }
   50% {
     transform: rotate(0deg) scale(1.03);
   }
-  75% {
+  66% {
     transform: rotate(2.5deg) scale(1.06);
   }
 }
 
 @keyframes produitCtaFloatMd {
   0%,
+  22%,
+  78%,
   100% {
     transform: rotate(0deg) scale(1);
   }
-  25% {
+  34% {
     transform: rotate(-3deg) scale(1.06);
   }
   50% {
     transform: rotate(0deg) scale(1.04);
   }
-  75% {
+  66% {
     transform: rotate(3deg) scale(1.08);
   }
 }
 
 @keyframes cornerImagePulse {
   0%,
+  24%,
+  76%,
   100% {
     transform: rotate(0deg) scale(1);
   }
