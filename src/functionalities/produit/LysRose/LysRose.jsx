@@ -1,8 +1,8 @@
-import logoLys from "../../../assets/logoLys.png";
-import catalogueProduit from "../../../assets/Catalogue-produit1.jpg";
+import logoLys from "../../../assets/logo/logoLys.png";
+import catalogueProduit from "../../../assets/Ph/lysRose.jpg";
 import ProduitTemplate from "../ProduitTemplate";
-import FondImage from "../../../assets/lysFond.jpg";
-import heroImage from "../../../assets/textLysRose.jpg";
+import FondImage from "../../../assets/fond/lysRoseFond.jpg";
+import heroImage from "../../../assets/textLysRose.png";
 
 export default function Produit4() {
   const paragraphs = [
@@ -18,7 +18,9 @@ export default function Produit4() {
     brandClassName:
       "mr-1 text-[clamp(1rem,2vw,2.2rem)] font-extrabold leading-none text-slate-900",
     cornerImageClassName:
-      "pointer-events-none absolute left-2 top-15 z-10 w-20 rounded-2xl opacity-95 shadow-lg sm:left-8 sm:top-5 sm:w-28 md:left-14 md:top-12 md:w-44 md:rounded-3xl",
+      "pointer-events-none absolute left-35 top-1 z-10 w-60 rounded-2xl sm:left-8 sm:top-3 sm:w-60 md:left-170 md:top-5 md:w-60 md:rounded-3xl",
+    boutonProduitClassName:"absolute z-10 pointer-events-none top-15 left-40 md:left-[740px] md:top-[375px]   w-[120px] rounded-2xl sm:w-30 md:w-60 md:rounded-3xl  px-2 py-4 text-xs sm:text-sm md:text-lg font-medium   bg-slate-900 text-white    transition-all duration-300 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2",
+  
   };
 
   return (

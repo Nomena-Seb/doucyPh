@@ -1,7 +1,20 @@
 function MobileHeader({ logoSrc, theme }) {
+
+  const scrollToContact = () => {
+    const element = document.getElementById('contact-section');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  const scrollToTop =() => {
+    window.scrollTo({top: 0, 
+                     behavior:'smooth'
+      })
+  };
+  
   return (
     <div className="flex flex-col gap-4 py-3 md:hidden">
-      <div className="flex items-center justify-center gap-3">
+      <div className="flex items-center justify-center gap-3" onClick={scrollToTop}>
         <img
           src={logoSrc}
           alt="Logo Doucy & Lys"
@@ -26,15 +39,20 @@ function MobileHeader({ logoSrc, theme }) {
         <button
           type="button"
           className={`w-full rounded-full border px-4 py-2 text-sm font-medium transition-all duration-300 ${theme.outlineButton}`}
+          onClick={scrollToContact}
         >
           Nous Ecrire
         </button>
-        <button
-          type="button"
-          className={`w-full rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ${theme.filledButton}`}
-        >
-          Appeler
-        </button>
+          <a href="https://wa.me/261385283093" 
+              target="_blank" 
+              rel="noopener noreferrer">
+              <button
+                type="button"
+                className={`w-full rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 bg-[#25D366] hover:bg-[#128C7E] text-white`}  
+              >
+                Whatsapp
+              </button>
+          </a>
       </div>
     </div>
   )

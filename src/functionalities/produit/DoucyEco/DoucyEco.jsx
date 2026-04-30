@@ -1,7 +1,8 @@
-import logoLys from "../../../assets/logoLys.png";
-import catalogueProduit from "../../../assets/Catalogue-produit1.jpg";
+import logoLys from "../../../assets/logo/logoDoucyEco.png";
+import catalogueProduit from "../../../assets/Ph/doucyEco.jpg";
 import ProduitTemplate from "../ProduitTemplate";
-import FondImage from "../../../assets/lysFond.jpg";
+import FondImage from "../../../assets/fond/doucyEcoFond.jpg";
+
 
 export default function Produit2() {
   const paragraphs = [
@@ -16,6 +17,8 @@ export default function Produit2() {
       "mt-3 space-y-2 text-[clamp(0.68rem,1.1vw,1.18rem)] font-medium leading-relaxed tracking-wide text-slate-700 sm:mt-4 sm:space-y-3 md:mt-6 md:space-y-4",
     brandClassName:
       "mr-1 text-[clamp(1rem,2vw,2.2rem)] font-extrabold leading-none text-slate-900",
+    boutonProduitClassName:"absolute z-10 pointer-events-none top-15 left-40 md:left-[740px] md:top-[375px]   w-[120px] rounded-2xl sm:w-30 md:w-60 md:rounded-3xl  px-2 py-4 text-xs sm:text-sm md:text-lg font-medium   bg-slate-900 text-white    transition-all duration-300 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2",
+  
   };
 
   return (

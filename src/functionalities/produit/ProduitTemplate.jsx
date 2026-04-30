@@ -26,17 +26,25 @@ export default function ProduitTemplate({
     descriptionClassName = "",
     brandClassName = "",
     cornerImageClassName = "",
+    boutonProduitClassName = "",
   } = textStyles;
 
+    const scrollToContact = () => {
+  const element = document.getElementById('contact-section');
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
   return (
-    <section className="w-full bg-white p-0 md:min-h-screen">
+    <section className="w-full bg-white md:min-h-screen">
       <div
         className="w-full overflow-visible bg-cover bg-center bg-no-repeat md:min-h-[calc(100vh-7rem)]"
         style={infoPanelStyle}
       >
         <div className="grid w-full grid-cols-[1.2fr_0.8fr] md:min-h-[calc(100vh-7rem)] md:grid-cols-2">
           <div
-            className={`flex flex-col justify-start px-3 pt-10 pb-24 sm:px-4 sm:pt-10 sm:pb-14 md:justify-start md:px-12 md:pt-16 md:pb-14 lg:px-16 lg:pb-16 ${panelTextClassName}`}
+            className={`flex flex-col justify-start pl-3 pr-15 pt-10 pb-24 sm:px-4 sm:pt-10 sm:pb-14 md:justify-start md:px-12 md:pt-16 md:pb-14 lg:px-16 lg:pb-16 ${panelTextClassName}`}
           >
             <ScrollReveal
               variant="zoomIn"
@@ -48,6 +56,14 @@ export default function ProduitTemplate({
                 alt={logoAlt}
                 className="w-full drop-shadow-[0_8px_18px_rgba(0,0,0,0.18)]"
               />
+               {cornerImageSrc ? (
+              <img
+                src={cornerImageSrc}
+                alt={cornerImageAlt}
+                className={cornerImageClassName}
+                aria-hidden={cornerImageAlt ? undefined : true}
+              />
+            ) : null}
             </ScrollReveal>
 
             <ScrollReveal
@@ -69,6 +85,13 @@ export default function ProduitTemplate({
 
                 {paragraphs[1] ? <p>{paragraphs[1]}</p> : null}
               </div>
+               <button
+                  type="button"
+                  className= {boutonProduitClassName}
+                  onClick={scrollToContact}
+               >
+                  Commander
+          </button>
             </ScrollReveal>
           </div>
 
@@ -76,21 +99,14 @@ export default function ProduitTemplate({
             variant="fadeRight"
             delay="delay-200"
             duration="duration-[1400ms]"
-            className="relative flex items-start justify-center overflow-visible px-3 pt-20 pb-14 sm:px-5 sm:pt-10 sm:pb-14 md:items-center md:px-6 md:pt-10 md:pb-14 lg:px-10 lg:pb-16"
+            className="relative flex items-start justify-center overflow-visible pl-2 pr-7 pt-23 pb-10 pr-9 sm:pt-10 sm:pb-14 md:items-center md:px-6 md:pt-10 md:pb-14 lg:px-10 lg:pb-16"
           >
-            {cornerImageSrc ? (
-              <img
-                src={cornerImageSrc}
-                alt={cornerImageAlt}
-                className={cornerImageClassName}
-                aria-hidden={cornerImageAlt ? undefined : true}
-              />
-            ) : null}
+           
 
             <img
               src={productImageSrc}
               alt={productImageAlt}
-              className="h-auto w-[100%] max-h-[80svh] rounded-xl object-contain object-center shadow-[0_12px_28px_rgba(0,0,0,0.16)] transition-transform duration-[1800ms] ease-out md:max-h-[calc(100vh-12rem)] md:w-full md:rounded-3xl md:object-contain md:shadow-[0_20px_45px_rgba(0,0,0,0.18)] md:scale-100"
+              className="h-auto w-full max-h-[90svh] rounded-xl object-contain scale-150 md:scale-100 shadow-[0_12px_28px_rgba(0,0,0,0.16)] transition-transform duration-[1800ms] ease-out md:max-h-[calc(100vh-12rem)] md:w-auto md:mx-auto md:rounded-3xl md:shadow-[0_20px_45px_rgba(0,0,0,0.18)]"
             />
           </ScrollReveal>
         </div>

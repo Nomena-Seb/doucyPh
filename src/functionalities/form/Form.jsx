@@ -102,7 +102,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-slate-50 px-6 pt-6 pb-10 lg:px-10 lg:pt-10 lg:pb-14">
+    <div className="flex min-h-screen items-center justify-center bg-slate-50 px-6 pt-6 pb-10 lg:px-10 lg:pt-10 lg:pb-14" id='contact-section'>
       <div className="w-full max-w-6xl overflow-hidden rounded-[2rem] border border-slate-100 bg-white shadow-2xl">
         <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
           <div className="flex flex-col justify-between bg-slate-900 px-8 pt-10 pb-12 text-white lg:px-10 lg:pt-12 lg:pb-14">
