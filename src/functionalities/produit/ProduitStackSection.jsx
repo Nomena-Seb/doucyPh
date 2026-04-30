@@ -3,10 +3,10 @@ export default function ProduitStackSection({ children, index }) {
 
   return (
     <section
-      className={`sticky top-0 w-full overflow-visible outline-none ${overlapClass} md:h-screen md:overflow-hidden`}
+      className={`sticky top-0 w-full overflow-visible outline-none ${overlapClass} md:min-h-screen`}
       style={{ zIndex: index + 1 }}
     >
-      <div className="w-full md:h-full md:overflow-hidden">{children}</div>
+      <div className="w-full">{children}</div>
     </section>
   );
 }

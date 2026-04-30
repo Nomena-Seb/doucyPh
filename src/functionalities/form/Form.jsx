@@ -102,10 +102,10 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-slate-50 p-6 lg:p-10">
+    <div className="flex min-h-screen items-center justify-center bg-slate-50 px-6 pt-6 pb-10 lg:px-10 lg:pt-10 lg:pb-14">
       <div className="w-full max-w-6xl overflow-hidden rounded-[2rem] border border-slate-100 bg-white shadow-2xl">
         <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="flex flex-col justify-between bg-slate-900 px-8 py-10 text-white lg:px-10 lg:py-12">
+          <div className="flex flex-col justify-between bg-slate-900 px-8 pt-10 pb-12 text-white lg:px-10 lg:pt-12 lg:pb-14">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.35em] text-blue-200">Doucy&Lys</p>
               <h2 className="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
@@ -129,7 +129,7 @@ const ContactForm = () => {
             </div>
           </div>
 
-          <div className="px-8 py-10 lg:px-10 lg:py-12">
+          <div className="px-8 pt-10 pb-12 lg:px-10 lg:pt-12 lg:pb-14">
             <Notification type={status.type} message={status.message} />
 
             <form onSubmit={handleSubmit} className="space-y-5">
