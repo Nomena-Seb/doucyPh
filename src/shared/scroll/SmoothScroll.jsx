@@ -147,6 +147,7 @@ export default function SmoothScroll({
       currentScrollRef.current = clampScroll(currentScrollRef.current);
     };
 
+
     updateReducedMotion();
     syncCurrentScroll();
 

@@ -5,7 +5,7 @@ function DesktopHeader({ logoSrc, theme }) {
   if (element) {
     element.scrollIntoView({ behavior: 'smooth' });
   }
-};
+  };
 
   const scrollToTop =() => {
     window.scrollTo({top: 0, 

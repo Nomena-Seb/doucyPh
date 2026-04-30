@@ -25,9 +25,110 @@
   .scrollbar-hidden::-webkit-scrollbar {
     display: none;
   }
-}
-html, body {
- 
-  width: 100%;
 
+  .produit-cta-anim {
+    will-change: transform;
+    animation: produitCtaFloatMobile 0.7s ease-in-out infinite;
+  }
+
+  .produit-cta-anim:hover,
+  .produit-cta-anim:focus-visible {
+    animation-play-state: paused;
+  }
+
+  .corner-image-anim {
+    will-change: transform;
+    transform-origin: center center;
+    animation: cornerImagePulse 1.6s ease-in-out infinite;
+  }
+
+  @media (min-width: 640px) {
+    .produit-cta-anim {
+      animation-name: produitCtaFloatSm;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .produit-cta-anim {
+      animation-name: produitCtaFloatMd;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .produit-cta-anim {
+      animation: none;
+    }
+
+    .corner-image-anim {
+      animation: none;
+    }
+  }
+}
+
+@keyframes produitCtaFloatMobile {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-2deg) scale(1.04);
+  }
+  50% {
+    transform: rotate(0deg) scale(1.02);
+  }
+  75% {
+    transform: rotate(2deg) scale(1.05);
+  }
+}
+
+@keyframes produitCtaFloatSm {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-2.5deg) scale(1.05);
+  }
+  50% {
+    transform: rotate(0deg) scale(1.03);
+  }
+  75% {
+    transform: rotate(2.5deg) scale(1.06);
+  }
+}
+
+@keyframes produitCtaFloatMd {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-3deg) scale(1.06);
+  }
+  50% {
+    transform: rotate(0deg) scale(1.04);
+  }
+  75% {
+    transform: rotate(3deg) scale(1.08);
+  }
+}
+
+@keyframes cornerImagePulse {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(2.2deg) scale(1.06);
+  }
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
 }
