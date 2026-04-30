@@ -1,3 +1,5 @@
+import { openWhatsAppPreferApp } from "../../shared/links/openWhatsApp";
+
 function MobileHeader({ logoSrc, theme }) {
 
   const scrollToContact = () => {
@@ -47,14 +49,13 @@ function MobileHeader({ logoSrc, theme }) {
         >
           Nous Ecrire
         </button>
-        <a
-          href="https://wa.me/261385283093"
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          type="button"
+          onClick={openWhatsAppPreferApp}
           className="w-full rounded-full px-4 py-2 text-center text-sm font-medium transition-all duration-300 bg-[#25D366] hover:bg-[#128C7E] text-white"
         >
           Whatsapp
-        </a>
+        </button>
       </div>
     </div>
   )
