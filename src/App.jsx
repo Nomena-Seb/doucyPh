@@ -15,9 +15,6 @@ function App() {
       >
         <div className="flex min-h-screen flex-col bg-slate-50 pt-36 text-slate-900 md:pt-28">
           <ProduitsLanding />
-          {/*  <main className="py-12">
-                <ContactForm />
-            </main> */}
           <Footer />
         </div>
       </SmoothScroll>

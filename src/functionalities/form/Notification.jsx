@@ -8,7 +8,11 @@ const Notification = ({ type, message }) => {
   };
 
   return (
-    <div className={`${styles[type]} p-4 mb-6 rounded shadow-md animate-fade-in`} role="alert">
+    <div
+      className={`${styles[type] ?? styles.error} p-4 mb-6 rounded shadow-md animate-fade-in`}
+      role="alert"
+      aria-live="polite"
+    >
       <p className="font-medium">{message}</p>
     </div>
   );

@@ -5,6 +5,7 @@ import Produit3 from "./LysBlanc/LysBlanc";
 import Produit4 from "./LysRose/LysRose";
 import Produit5 from "./DoucyConfort/DoucyConfort";
 import Produit6 from "./DoucyPro/DoucyPro";
+import ContactForm from "../form/Form";
 
 export default function ProduitsLanding() {
   return (
@@ -32,6 +33,10 @@ export default function ProduitsLanding() {
 
       <ProduitStackSection index={5}>
         <Produit6 />
+      </ProduitStackSection>
+
+      <ProduitStackSection index={6}>
+        <ContactForm />
       </ProduitStackSection>
 
     </main>
