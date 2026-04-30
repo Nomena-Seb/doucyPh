@@ -15,7 +15,11 @@ function DesktopHeader({ logoSrc, theme }) {
 
   return (
     <div className="hidden items-center justify-between gap-6 py-4 md:flex">
-      <div className="flex items-center gap-3" onClick={scrollToTop} >
+      <button
+        type="button"
+        className="flex items-center gap-3 text-left"
+        onClick={scrollToTop}
+      >
         <img
           src={logoSrc}
           alt="Logo Doucy & Lys"
@@ -34,7 +38,7 @@ function DesktopHeader({ logoSrc, theme }) {
             Le confort du jour
           </p>
         </div>
-      </div>
+      </button>
 
       <div className="flex items-center gap-3">
           <button
@@ -44,17 +48,13 @@ function DesktopHeader({ logoSrc, theme }) {
           >
                   Nous Ecrire
           </button>
-          <a  href="https://wa.me/261385283093" 
-              target="_blank" 
-              rel="noopener noreferrer"    
+          <a
+            href="https://wa.me/261385283093"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full px-5 py-2 text-sm font-medium transition-all duration-300 bg-[#25D366] hover:bg-[#128C7E] text-white"
           >
-            <button
-              type="button"
-              className={`rounded-full px-5 py-2 text-sm font-medium transition-all duration-300 bg-[#25D366] hover:bg-[#128C7E] text-white `} 
-            >
-              {/*${theme.filledButton} */}
-                  Whatsapp
-        </button>
+            Whatsapp
           </a>
         
       </div>

@@ -18,8 +18,8 @@ export default function Produit4() {
     brandClassName:
       "mr-1 text-[clamp(1rem,2vw,2.2rem)] font-extrabold leading-none text-slate-900",
     cornerImageClassName:
-      "pointer-events-none absolute left-35 top-1 z-10 w-60 rounded-2xl sm:left-8 sm:top-3 sm:w-60 md:left-170 md:top-5 md:w-60 md:rounded-3xl",
-    boutonProduitClassName:"absolute z-10 pointer-events-none top-15 left-40 md:left-[740px] md:top-[375px]   w-[120px] rounded-2xl sm:w-30 md:w-60 md:rounded-3xl  px-2 py-4 text-xs sm:text-sm md:text-lg font-medium   bg-slate-900 text-white    transition-all duration-300 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2",
+      "pointer-events-none w-44 translate-x-3 -translate-y-2 rounded-2xl sm:w-52 sm:translate-x-4 sm:translate-y-3 md:w-60 md:translate-x-30 md:translate-y-4 md:rounded-3xl",
+    boutonProduitClassName:"absolute z-10 pointer-events-none top-[3.75rem] left-40 md:left-[740px] md:top-[375px] w-[120px] rounded-2xl sm:w-[7.5rem] md:w-60 md:rounded-3xl px-2 py-4 text-xs sm:text-sm md:text-lg font-medium bg-slate-900 text-white transition-all duration-300 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2",
   
   };
 

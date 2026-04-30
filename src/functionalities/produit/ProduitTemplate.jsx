@@ -44,27 +44,36 @@ export default function ProduitTemplate({
       >
         <div className="grid w-full grid-cols-[1.2fr_0.8fr] md:min-h-[calc(100vh-7rem)] md:grid-cols-2">
           <div
-            className={`flex flex-col justify-start pl-3 pr-15 pt-10 pb-24 sm:px-4 sm:pt-10 sm:pb-14 md:justify-start md:px-12 md:pt-16 md:pb-14 lg:px-16 lg:pb-16 ${panelTextClassName}`}
+            className={`flex flex-col justify-start pl-3 pr-[3.75rem] pt-10 pb-24 sm:px-4 sm:pt-10 sm:pb-14 md:justify-start md:px-12 md:pt-16 md:pb-14 lg:px-16 lg:pb-16 ${panelTextClassName}`}
           >
-            <ScrollReveal
-              variant="zoomIn"
-              delay="delay-100"
-              className="w-full max-w-[90px] sm:max-w-[120px] md:max-w-[180px] lg:max-w-[260px]"
-            >
-              <img
-                src={logoSrc}
-                alt={logoAlt}
-                className="w-full drop-shadow-[0_8px_18px_rgba(0,0,0,0.18)]"
-              />
-               {cornerImageSrc ? (
-              <img
-                src={cornerImageSrc}
-                alt={cornerImageAlt}
-                className={cornerImageClassName}
-                aria-hidden={cornerImageAlt ? undefined : true}
-              />
-            ) : null}
-            </ScrollReveal>
+            <div className="flex w-full items-start justify-between gap-3 sm:gap-4">
+              <ScrollReveal
+                variant="zoomIn"
+                delay="delay-100"
+                className="w-full max-w-[90px] shrink-0 sm:max-w-[120px] md:max-w-[180px] lg:max-w-[260px]"
+              >
+                <img
+                  src={logoSrc}
+                  alt={logoAlt}
+                  className="w-full drop-shadow-[0_8px_18px_rgba(0,0,0,0.18)]"
+                />
+              </ScrollReveal>
+
+              {cornerImageSrc ? (
+                <ScrollReveal
+                  variant="fadeRight"
+                  delay="delay-200"
+                  className="flex flex-1 justify-end"
+                >
+                  <img
+                    src={cornerImageSrc}
+                    alt={cornerImageAlt}
+                    className={cornerImageClassName}
+                    aria-hidden={cornerImageAlt ? undefined : true}
+                  />
+                </ScrollReveal>
+              ) : null}
+            </div>
 
             <ScrollReveal
               variant="fadeUp"
@@ -87,7 +96,7 @@ export default function ProduitTemplate({
               </div>
                <button
                   type="button"
-                  className= {boutonProduitClassName}
+                  className={`${boutonProduitClassName} pointer-events-auto`}
                   onClick={scrollToContact}
                >
                   Commander
@@ -99,7 +108,7 @@ export default function ProduitTemplate({
             variant="fadeRight"
             delay="delay-200"
             duration="duration-[1400ms]"
-            className="relative flex items-start justify-center overflow-visible pl-2 pr-7 pt-23 pb-10 pr-9 sm:pt-10 sm:pb-14 md:items-center md:px-6 md:pt-10 md:pb-14 lg:px-10 lg:pb-16"
+            className="relative flex items-start justify-center overflow-visible pl-2 pr-9 pt-[5.75rem] pb-10 sm:pt-10 sm:pb-14 md:items-center md:px-6 md:pt-10 md:pb-14 lg:px-10 lg:pb-16"
           >
            
 

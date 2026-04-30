@@ -14,7 +14,11 @@ function MobileHeader({ logoSrc, theme }) {
   
   return (
     <div className="flex flex-col gap-4 py-3 md:hidden">
-      <div className="flex items-center justify-center gap-3" onClick={scrollToTop}>
+      <button
+        type="button"
+        className="flex items-center justify-center gap-3 text-center"
+        onClick={scrollToTop}
+      >
         <img
           src={logoSrc}
           alt="Logo Doucy & Lys"
@@ -33,7 +37,7 @@ function MobileHeader({ logoSrc, theme }) {
             Un monde de Douceur
           </p>
         </div>
-      </div>
+      </button>
 
       <div className="grid grid-cols-2 gap-2">
         <button
@@ -43,16 +47,14 @@ function MobileHeader({ logoSrc, theme }) {
         >
           Nous Ecrire
         </button>
-          <a href="https://wa.me/261385283093" 
-              target="_blank" 
-              rel="noopener noreferrer">
-              <button
-                type="button"
-                className={`w-full rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 bg-[#25D366] hover:bg-[#128C7E] text-white`}  
-              >
-                Whatsapp
-              </button>
-          </a>
+        <a
+          href="https://wa.me/261385283093"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full rounded-full px-4 py-2 text-center text-sm font-medium transition-all duration-300 bg-[#25D366] hover:bg-[#128C7E] text-white"
+        >
+          Whatsapp
+        </a>
       </div>
     </div>
   )
