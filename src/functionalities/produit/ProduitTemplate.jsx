@@ -76,26 +76,33 @@ export default function ProduitTemplate({
               ) : null}
             </div>
 
-            <ScrollReveal
-              variant="fadeUp"
-              delay="delay-300"
-              className="mt-4 flex w-full min-h-[19rem] flex-col sm:mt-6 sm:min-h-[21rem] md:mt-8 md:min-h-[24rem]"
-            >
-              <h1 className={sloganClassName}>
-                {slogan}
-              </h1>
+            <div className="-mt-3 flex w-full min-h-[19rem] flex-col sm:-mt-1 sm:min-h-[21rem] md:mt-6 md:min-h-[24rem]">
+              <ScrollReveal
+                variant="fadeUp"
+                delay="delay-300"
+                className="w-full"
+              >
+                <h1 className={sloganClassName}>
+                  {slogan}
+                </h1>
 
-              <div className={descriptionClassName}>
-                <p>
-                  <span className={brandClassName}>
-                    {brandName}
-                  </span>
-                  {paragraphs[0]}
-                </p>
+                <div className={descriptionClassName}>
+                  <p>
+                    <span className={brandClassName}>
+                      {brandName}
+                    </span>
+                    {paragraphs[0]}
+                  </p>
 
-                {paragraphs[1] ? <p>{paragraphs[1]}</p> : null}
-              </div>
-              <div className={`${boutonProduitClassName} relative z-30 pointer-events-auto`}>
+                  {paragraphs[1] ? <p>{paragraphs[1]}</p> : null}
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal
+                variant="fadeUp"
+                delay="delay-500"
+                className={`${boutonProduitClassName} relative z-30 pointer-events-auto`}
+              >
                 <button
                   type="button"
                   className="produit-cta-anim inline-flex w-fit rounded-2xl bg-[#e20a69] px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:bg-[#b40854] hover:brightness-95 focus:outline-none md:rounded-3xl md:px-8 md:py-4 md:text-xl"
@@ -103,8 +110,8 @@ export default function ProduitTemplate({
                 >
                   Commander Moi
                 </button>
-              </div>
-            </ScrollReveal>
+              </ScrollReveal>
+            </div>
           </div>
 
           <ScrollReveal
