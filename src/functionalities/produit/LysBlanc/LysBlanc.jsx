@@ -11,11 +11,15 @@ export default function Produit3() {
   const textStyles = {
     panelTextClassName: "text-slate-900",
     sloganClassName:
-      "font-['Brush_Script_MT','Segoe_Script',cursive] text-[clamp(1.05rem,4.3vw,4.2rem)] italic leading-none tracking-wide text-slate-900",
+      "font-cream text-[clamp(1.05rem,4.3vw,4.2rem)] font-normal leading-none tracking-wide text-slate-900",
     descriptionClassName:
       "mt-1 space-y-2 text-[clamp(0.68rem,1.1vw,1.18rem)] font-medium leading-relaxed tracking-wide text-slate-700 sm:mt-2 sm:space-y-3 md:mt-6 md:space-y-4",
+    paragraphOneClassName:
+      "font-futura font-medium",
+    paragraphTwoClassName:
+      "font-futura font-medium",
     brandClassName:
-      "mr-1 text-[clamp(1rem,2vw,2.2rem)] font-extrabold leading-none text-slate-900",
+      "mr-1 font-cream text-[clamp(1rem,2vw,2.2rem)] font-normal leading-none text-slate-900",
   };
 
   return (

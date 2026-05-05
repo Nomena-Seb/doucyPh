@@ -12,11 +12,15 @@ export default function Produit2() {
   const textStyles = {
     panelTextClassName: "text-slate-900 md:pb-28 lg:pb-32",
     sloganClassName:
-      "font-['Brush_Script_MT','Segoe_Script',cursive] text-[clamp(1.05rem,4.3vw,4.2rem)] italic leading-none tracking-wide text-slate-900",
+      "font-chanson text-[clamp(1.05rem,4.3vw,4.2rem)] font-normal leading-none tracking-wide text-slate-900",
     descriptionClassName:
       "mt-1 space-y-2 text-[clamp(0.68rem,1.1vw,1.18rem)] font-medium leading-relaxed tracking-wide text-slate-700 sm:mt-2 sm:space-y-3 md:mt-6 md:space-y-4",
+    paragraphOneClassName:
+      "font-futura font-medium",
+    paragraphTwoClassName:
+      "font-futura font-medium",
     brandClassName:
-      "mr-1 text-[clamp(1rem,2vw,2.2rem)] font-extrabold leading-none text-slate-900",
+      "mr-1 font-chanson text-[clamp(1rem,2vw,2.2rem)] font-normal leading-none text-slate-900",
     boutonProduitClassName:
       "mt-auto w-fit translate-x-56 -translate-y-7 sm:translate-x-64 sm:-translate-y-8 md:mt-5 md:translate-x-[35rem] md:-translate-y-14",
   };
@@ -35,6 +39,7 @@ export default function Produit2() {
     />
   );
 }
+
 
 
 

@@ -7,8 +7,7 @@ export default function ProduitStackSection({
   const overlapClass = index === 0 ? "mt-0" : "-mt-[10vh]";
   const depth = index - activeIndex;
 
-  const scale =
-    depth < 0 ? 0.97 : depth === 0 ? 1 : depth === 1 ? 0.985 : 0.975;
+  const scale = 1;
   const translateY = depth === 1 ? 16 : depth > 1 ? 24 : 0;
   const opacity = depth < 0 ? 0.9 : depth === 0 ? 1 : depth === 1 ? 0.96 : 0.92;
   const brightness = depth < 0 ? 0.95 : 1;
@@ -26,7 +25,7 @@ export default function ProduitStackSection({
       style={{ zIndex: index + 1 }}
     >
       <div
-        className={`w-full rounded-[1.2rem] transform-gpu transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${ringClass}`}
+        className={`w-full transform-gpu transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${ringClass}`}
         style={{
           transform: `translate3d(0, ${translateY}px, 0) scale(${scale})`,
           opacity,

@@ -53,6 +53,7 @@ export default function ScrollReveal({
         motion-reduce:transform-none motion-reduce:opacity-100 motion-reduce:blur-0
         ${duration}
         ${delay}
+        ${isVisible ? "scroll-reveal-visible" : "scroll-reveal-hidden"}
         ${isVisible ? visibleClass : hiddenClass}
         ${className}
       `}
